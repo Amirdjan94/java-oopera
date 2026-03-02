@@ -33,7 +33,7 @@ public class Theatre {
 
         //Создаю оперу
         Opera opera = new Opera(director2, 180, new ArrayList<>(), Scenario.CARMEN.getNameOfShow(),
-                Scenario.SWAN_LAKE.getLibretto(), musicAuthor, 15);
+                Scenario.CARMEN.getLibretto(), musicAuthor, 15);
 
         //Создаю баллет
         Ballet ballet = new Ballet(director1, 60, new ArrayList<>(), Scenario.SWAN_LAKE.getNameOfShow(),
