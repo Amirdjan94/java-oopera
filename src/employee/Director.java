@@ -14,8 +14,7 @@ public class Director extends Person {
     @Override
     public String toString() {
         return "Режиссер{" +
-                "Имя ='" + name + '\'' +
-                ", Фамилия ='" + surname + '\'' +
+                super.toString() +
                 '}';
     }
 

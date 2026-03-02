@@ -31,4 +31,10 @@ public class Person {
         return surname;
     }
 
+    @Override
+    public String toString() {
+        return "Имя ='" + name + '\'' +
+                ", Фамилия ='" + surname + '\'';
+    }
+
 }
