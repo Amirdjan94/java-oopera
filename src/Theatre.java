@@ -69,7 +69,7 @@ public class Theatre {
 
         //Замена актера в баллете и вывод обновленного списка
         ballet.replaceActor(actor1, actor2.surname);
-        System.out.println("Список актеров в балете");
+        System.out.println("Отображаю новый список актеров в балете");
         ballet.printActorList();
 
         //Попытка замены не существующего актера
@@ -78,16 +78,10 @@ public class Theatre {
 
         //Отображение текста либретто
         System.out.println("Текст либретто для Оперы");
-        opera.printLibrettoText();
-        printDivide();
-
-        System.out.println("Текст либретто для Балета");
-        ballet.printLibrettoText();
-        printDivide();
-
-
         printLibretto(opera);
 
+        System.out.println("Текст либретто для Балета");
+        printLibretto(ballet);
     }
 
     public static void printLibretto(MusicalShow musicalShow) {
