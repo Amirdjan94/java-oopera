@@ -46,21 +46,39 @@ public class Show {
     }
 
     public int checkExistActor (String surname){ // Проверка на существование актера в списке. Перегрузка метода
+        int countOfActorWithSurname = 0;
+        int index = -1;
         for (int i = 0; i < listOfActors.size(); i++) {
-            if (listOfActors.get(i).surname == surname) {
-                return i;
+            if (listOfActors.get(i).getSurname().equals(surname)) {
+                index = i;
+                countOfActorWithSurname++;
             }
         }
-        return -1;
+        if (countOfActorWithSurname == 0){
+            return -1;
+        } else  if (countOfActorWithSurname > 1){
+            return -2;
+        } else {
+            return index;
+        }
+
+
     }
 
     public void replaceActor (Actor newActor, String existActorSurname){
         int index = checkExistActor(existActorSurname);
         if ( index == -1 ) {
             System.out.println("В списках нет актера с такой фамилией - " + existActorSurname);
+        } else if ( index == -2 ) {
+            System.out.println("В списках есть однофамильцы, замена не произошла - " + existActorSurname);
         } else {
             listOfActors.set(index, newActor);
-            System.out.println("Актер " + existActorSurname + " заменен на " + newActor.surname);
+            System.out.println("Актер " + existActorSurname + " заменен на " + newActor.getSurname());
         }
     }
+
+    public void printDirector() { //Распечатать информацию о режиссёре спектакля
+        System.out.println(director);
+    }
+
 }

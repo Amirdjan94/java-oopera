@@ -68,7 +68,7 @@ public class Theatre {
         ballet.printActorList();
 
         //Замена актера в баллете и вывод обновленного списка
-        ballet.replaceActor(actor1, actor2.surname);
+        ballet.replaceActor(actor1, actor2.getSurname());
         System.out.println("Отображаю новый список актеров в балете");
         ballet.printActorList();
 

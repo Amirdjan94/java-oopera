@@ -5,9 +5,9 @@ import data.Gender;
 import java.util.Objects;
 
 public class Person {
-    public String name;
-    public String surname;
-    public Gender gender;
+    protected String name;
+    protected String surname;
+    protected Gender gender;
 
     public Person(Gender gender, String name, String surname) {
         this.gender = gender;
@@ -26,4 +26,9 @@ public class Person {
     public int hashCode() {
         return Objects.hash(name, surname, gender);
     }
+
+    public String getSurname() {
+        return surname;
+    }
+
 }
