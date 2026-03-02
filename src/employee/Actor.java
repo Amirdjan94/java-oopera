@@ -26,12 +26,11 @@ public class Actor extends Person {
         if (o == null || getClass() != o.getClass()) return false;
         Actor actor = (Actor) o;
         return (height == actor.height) &&
-                Objects.equals(((Person) o).name, ((Person) this).name) &&
-                Objects.equals(((Person) o).surname, ((Person) this).surname);
+                super.equals(o);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, height);
+        return super.hashCode()*31 + Objects.hash(name, surname, height);
     }
 }
